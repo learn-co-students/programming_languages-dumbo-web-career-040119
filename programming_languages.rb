@@ -74,7 +74,7 @@ def reformat_languages(languages)
       attr_hash.each do |attribute, value|
       new_hash[language] = {} if new_hash[language].nil?
 
-      new_hash[language][:style] ||= []
+      new_hash[language][:style] || new_hash[language][:style]= []
       new_hash[language][:style] << oo_or_func
 
       new_hash[language][attribute] = value if new_hash[language][attribute].nil?
