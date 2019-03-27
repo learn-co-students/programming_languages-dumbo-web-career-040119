@@ -12,8 +12,7 @@ def reformat_languages(languages)
     # "info" is the hash that the name of the language points to!
     lang_name.each do |name, info|
 
-      # This "if" says that if you are given a name from the new_hash,
-      # take the style from that name in languages and ...
+      # This "if" says that if you are given a name from the new_hash...
       if new_hash[name]
 
         # Since in new_hash the :style key is going to have a value of
