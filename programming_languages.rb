@@ -15,11 +15,9 @@ def reformat_languages(languages)
       # This "if" says that if you are given a name from the new_hash...
       if new_hash[name]
 
-        # Since in new_hash the :style key is going to have a value of
-        # an array, use << to add the style passed in above from the
-        # languages hash to that array.
+        # Since in new_hash the :style key is an array, use << to add the
+        # style passed in above from the languages hash to that array.
         new_hash[name][:style] << style
-
 
       # If we are not passed a name from the new_hash, then we must
       # create a value for the name manually.
