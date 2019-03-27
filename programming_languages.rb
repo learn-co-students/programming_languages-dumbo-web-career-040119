@@ -12,15 +12,17 @@ def reformat_languages(languages)
     # "info" is the hash that the name of the language points to!
     lang_name.each do |name, info|
 
-      # This "if" says that if you are given a name from the new_hash...
-      if new_hash[name]
+      # If we have created the part of the new_hash with the block
+      # after "else" below, then we can fill in the style array!
+      if new_hash.has_key?(name)
 
         # Since in new_hash the :style key is an array, use << to add the
         # style passed in above from the languages hash to that array.
+        # This is used to add javascripts extra style to the array!
         new_hash[name][:style] << style
 
       # If we are not passed a name from the new_hash, then we must
-      # create a value for the name manually.
+      # create a value for the name manually from scratch.
       else
         new_hash[name] = {
           style: [style],
