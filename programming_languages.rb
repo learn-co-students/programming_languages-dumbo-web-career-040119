@@ -1,5 +1,4 @@
-# we dont need to worry about ":type", because that stays the same
-# in new_hash as in the languages hash!
+
 
 def reformat_languages(languages)
   new_hash = {}
